@@ -12,7 +12,7 @@ const Bookmark = (props) => {
             <h2 className='font-bold mb-3'>Bookmarked Blogs: {bookmark.length}</h2>
             <div className=''>
                 {
-                    bookmark.map(bookmarkedBlog => <h2 className='font-semibold shadow-xl bg-white mb-2 rounded-lg p-3'>{bookmarkedBlog.title}</h2>)
+                    bookmark.map(bookmarkedBlog => <h2 key={bookmarkedBlog.id} className='font-semibold shadow-xl bg-white mb-2 rounded-lg p-3'>{bookmarkedBlog.title}</h2>)
                 }
             </div>
         </div>

@@ -5,12 +5,15 @@ const Questions = () => {
         <div className='p-8'>
             <div className="overflow-x-auto my-12">
                 <h2 className='font-bold my-6 text-2xl'>1. Props vs State</h2>
-                <table className="table w-full border-separate border border-slate-500 text-center">
-                    <tr>
-                        <th className='border border-slate-600 w-2/4'>Props</th>
-                        <th className='border border-slate-600 w-2/4'>State</th>
+                <table className="table w-full border-separate border text-center text-white">
+                   <thead>
+                   <tr>
+                        <th className='border border-slate-700 font-bold w-2/4'>Props</th>
+                        <th className='border border-slate-700 font-bold w-2/4'>State</th>
                     </tr>
-                    <tr>
+                   </thead>
+                  <tbody>
+                  <tr>
                         <td className='border border-slate-700'>Passed from parent component</td>
                         <td className='border border-slate-700'>Internal to the component</td>
                     </tr>
@@ -30,6 +33,7 @@ const Questions = () => {
                         <td className='border border-slate-700'>Changes trigger re-render of child components</td>
                         <td className='border border-slate-700'>Changes trigger re-render of the component itself and its child components</td>
                     </tr>
+                  </tbody>
                 </table>
             </div>
 
@@ -48,12 +52,12 @@ const Questions = () => {
                 </ol>
             </div>
             <div>
-            <h2 className='font-bold my-6 text-2xl'>3. Purpose of `useState` other than fetching data</h2>
+            <h2 className='font-bold my-6 text-2xl'>3. Purpose of useState other than fetching data</h2>
             <ol className='list-decimal'>
-                <li className="mb-4">One of the main purposes of `useState` is to manage state in functional components. Before the introduction of hooks, state could only be managed in class components using the setState method. With the introduction of `useState`, state management is now possible in functional components as well, which is a huge benefit for developers who prefer to use functional components over class components.</li>
-                <li className="mb-4">Another purpose of `useState` is to handle user interactions and input. For example, in a form component, `useState` can be used to handle the user's input and store it as state. This allows for easier validation and submission of the form data.</li>
-                <li className="mb-4">`useState` can also be used to control the rendering of a component. For example, if a component should render different content based on a user's interaction, `useState` can be used to manage the state of the component and trigger a re-render when necessary.</li>
-                <li className="mb-4">Overall, `useState` is a versatile hook that allows for many different use cases beyond just fetching data. It's a powerful tool for managing state and interactions in functional components, and can help make React applications more dynamic and interactive.</li>
+                <li className="mb-4">One of the main purposes of useState is to manage state in functional components. Before the introduction of hooks, state could only be managed in class components using the setState method. With the introduction of useState, state management is now possible in functional components as well, which is a huge benefit for developers who prefer to use functional components over class components.</li>
+                <li className="mb-4">Another purpose of useState is to handle user interactions and input. For example, in a form component, useState can be used to handle the user's input and store it as state. This allows for easier validation and submission of the form data.</li>
+                <li className="mb-4">useState can also be used to control the rendering of a component. For example, if a component should render different content based on a user's interaction, useState can be used to manage the state of the component and trigger a re-render when necessary.</li>
+                <li className="mb-4">Overall, useState is a versatile hook that allows for many different use cases beyond just fetching data. It's a powerful tool for managing state and interactions in functional components, and can help make React applications more dynamic and interactive.</li>
             </ol>
             </div>
             <div>

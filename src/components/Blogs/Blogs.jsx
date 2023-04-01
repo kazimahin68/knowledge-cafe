@@ -3,6 +3,8 @@ import Blog from '../BLog/Blog';
 import Time from '../Time/Time';
 import Bookmark from '../Bookmarked/Bookmark';
 import Questions from '../Questions/Questions';
+// import { toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
@@ -15,8 +17,8 @@ const Blogs = () => {
             .then(data => setBlogs(data))
     }, []);
     const bookmarkedBlogs = (blog) => {
-        const newBookmarkBlog = [...bookmark, blog];
-        setBookmark(newBookmarkBlog);
+            const newBookmarkBlog = [...bookmark, blog];
+            setBookmark(newBookmarkBlog);
     }
 
     const readingTime = (reading_time) => {
@@ -35,7 +37,7 @@ const Blogs = () => {
                 </div>
                 <div className='basis-1 md:basis-1/4 p-8'>
                     <Time time={time}></Time>
-                    <Bookmark bookmark={bookmark}></Bookmark>
+                    <Bookmark bookmark={bookmark} key={bookmark.id}></Bookmark>
                 </div>
             </div>
             <div>
